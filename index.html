@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .red-text {
+        color: red;
+        font-weight: bold;
+      }
+      li {
+        cursor: pointer;
+      }
+      li:hover::after {
+        content: '[x]';
+        font-size: 14px;
+        color: #aaa;
+        margin-left: 5px;
+      }
+      .center {
+        text-align: center;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        margin: 0 auto;
+      }
+
+      .margin {
+        margin: 2%;
+      }
+    </style>
+    <title>jQuery</title>
+  </head>
+  <body>
+    <!-- <input type="text" />
+    <button>Add</button>
+    <ul></ul> -->
+    <h2 class="center">お問い合わせフォーム</h2>
+    <div class="flex">
+      <label for="name">名前</label>
+      <input id="name" class="margin" type="name" />
+      <label for="email">メール</label>
+      <input id="email" class="margin" type="email" />
+      <label for="title">タイトル</label>
+      <input id="title" class="margin" type="text" />
+      <label for="message">メッセージ</label>
+      <textarea id="message" class="margin" cols="10" rows="5"></textarea>
+      <button id="submit">送信</button>
+    </div>
+    <ul></ul>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
