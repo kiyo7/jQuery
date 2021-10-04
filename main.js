@@ -16,14 +16,13 @@
 // });
 
 $(() => {
+  //jQueryの変数は$をつける慣習がある
   const $name = $('#name');
   const $email = $('#email');
   const $title = $('#title');
   const $message = $('#message');
 
   const formValue = [$name, $email, $title, $message];
-
-  console.log(formValue);
 
   for (let i = 0; i < formValue.length; i++) {
     $(formValue[i]).change((e) => {
@@ -40,6 +39,7 @@ $(() => {
       return;
     }
     for (let i = 0; i < formValue.length; i++) {
+      //要素の追加は<追加したい要素>というようにする
       $('<li>').text(`${formValue[i].val()}`).appendTo('ul');
     }
   });
